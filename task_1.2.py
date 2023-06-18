@@ -1,5 +1,5 @@
 import random
-import datetime
+from random import choice
 # Задача 1.2.
 
 # Пункт A.
@@ -22,7 +22,8 @@ my_favorite_songs = [
 first_song = random.choice(my_favorite_songs)
 second_song = random.choice(my_favorite_songs)
 third_song = random.choice(my_favorite_songs)
-print("Три песни звучат", first_song[1] + second_song[1] + third_song[1], 'минут')
+print("Три песни звучат", first_song[1] +
+      second_song[1] + third_song[1], 'минут')
 
 # Пункт B.
 # Есть словарь песен
@@ -41,12 +42,6 @@ my_favorite_songs_dict = {
     'In This World': 4.02,
 }
 
-# print(my_favorite_songs_dict.append(4))
-# Дополнительно для пунктов A и B
-# Пункт C.
-# Сгенерируйте случайные песни с помощью модуля random
-# import random
-
-# Дополнительно
-# Пункт D.
-# Переведите минуты и секунды в формат времени. Используйте модуль datetime
+total_time = choice(list(my_favorite_songs_dict.items()))
+print("Три песни звучат", total_time[1] +
+      total_time[1] + total_time[1], 'минут.')
